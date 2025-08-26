@@ -1,0 +1,21 @@
+Post请求中Body参数：<br>
+1、form-data:可传基本数据类型（int,string等），也可以传文件，不算典型的表单格式。对于传递内容不做修改，直接传原始值，因此需要空间极大<br>
+2、x-www-form-urlencoded：真正的表单格式，对url中空格、中文、特殊字符（&、%等）进行了编码（编码规则是%+2位16进制,比如说空格是%20），传递时会转化成键值对连接的形式，如name=Tom%20Lee&age=20<br>
+3、raw是指文本格式<br>
+注意点：<br>
+1、参数设置的中文名列和说明列一般只是增加生成的接口文档的可读性，传参时无效果（得看具体的工具）<br>
+2、参数一般可以在高级设置/更多里修改，可以不用在Mock里限定，用Mock当然也可以<br>
+<br>
+一般工具会提供的参数选项：Params,Body,Header,Cookie,Auth<br>
+<br>
+Mock功能：<br>
+1、生成假数据：以@xxx作为占位符为形式（Mock.js语法）；或$xxx.xxx(Faker.js)（不同Mock引擎（就是组件））<br>
+2、有些工具目前有智能Mock，自动随机出数据，但不一定精准<br>
+<br>
+Mock相关：<br>
+1、apifox的Mock智能生成有用wildcard匹配字段名，从而自动生成需要的格式，wildcard是一种比正则简单许多的匹配方法<br>
+2、不同类型Mock对比总结：<br>
+<img width="1105" height="310" alt="image" src="https://github.com/user-attachments/assets/bb775e8d-ff67-4511-9af6-3203fd57cdd6" /><br>
+<br>
+<br>
+返回数据一般会添加成功示例和异常示例<br>
