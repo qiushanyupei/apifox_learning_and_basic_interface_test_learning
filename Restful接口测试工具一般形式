@@ -1,3 +1,0 @@
-Post请求：
-1、form-data:可传基本数据类型（int,string等），也可以传文件，不算典型的表单格式
-2、x-www-form-urlencoded：真正的表单格式，传递时会转化成键值对连接的形式，如name=Tom%20Lee&age=20
